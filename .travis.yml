@@ -7,6 +7,10 @@ android:
     - platform-tools
     - build-tools-23.0.3
     - android-23
+  licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 
 script:
    - ./gradlew build
