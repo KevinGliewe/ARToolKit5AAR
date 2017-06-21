@@ -1,4 +1,5 @@
 # ARToolKit5 Android Archive Library (aar)
+[![Build Status](https://travis-ci.org/KevinGliewe/ARToolKit5AAR.svg?branch=master)](https://travis-ci.org/KevinGliewe/ARToolKit5AAR)
 
 This project builds an aar file which can be imported into other Android-Projects. So you can use the ARToolKit without carrying the Library-Project around.
 The main-repository is [here](https://github.com/artoolkit/artoolkit5).
