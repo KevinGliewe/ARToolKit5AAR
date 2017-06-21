@@ -1,5 +1,15 @@
 language: android
 jdk: oraclejdk8
+
+# Fix License bug: https://github.com/travis-ci/travis-ci/issues/6555#issuecomment-282635361
+install:
+  - echo y | android update sdk -u -a -t tools
+  - echo y | android update sdk -u -a -t platform-tools
+  - echo y | android update sdk -u -a -t build-tools-23.0.3
+  - echo y | android update sdk -u -a -t android-23
+  - echo y | android update sdk -u -a -t extra-google-m2repository
+  - echo y | android update sdk -u -a -t extra-android-m2repository
+
 android:
   components:
     - tools # to get the new `repository-11.xml`
