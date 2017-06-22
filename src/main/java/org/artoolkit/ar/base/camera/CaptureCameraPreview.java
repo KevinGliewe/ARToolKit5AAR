@@ -236,7 +236,10 @@ public class CaptureCameraPreview extends SurfaceView implements SurfaceHolder.C
             Log.i(TAG, "onPreviewFrame(): Camera capture FPS: " + fpsCounter.getFPS());
         }
 
-
+        
     }
+
+    public int getCaptureWidth() { return captureWidth; }
+    public int getCaptureHeight() { return captureHeight; }
 
 }

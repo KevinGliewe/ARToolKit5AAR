@@ -426,4 +426,24 @@ public class ARToolKit {
         return null;
     }
 
+    public Fov getFov() {
+        return new Fov(getProjectionMatrix());
+    }
+
+    public class Fov {
+        private float fov;
+        private float fovY;
+
+        public float getFov() { return fov; }
+        public float getFovY() { return fovY; }
+
+        public Fov(float[] projection) {
+            // http://www.terathon.com/gdc07_lengyel.pdf
+
+            float aspect_ratio = projection[0] / projection[5]; // H / W
+            float focal_len = projection[0];
+            fov = 2.0f * (float)Math.atan2(1, focal_len);
+            fovY = fov * aspect_ratio;
+        }
+    }
 }
